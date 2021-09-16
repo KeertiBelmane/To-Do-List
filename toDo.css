@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+select{
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+body{
+    
+    background-color: black;
+    color: white;
+}
+
+h1{
+    font-size: 50px;
+}
+
+header,
+form{
+    font-family: cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 3;
+}
+
+form input,
+form button{
+    padding: 10px;
+    border: none;
+    background: white;
+    font-size: 20px;
+}
+
+form button{
+    color: black;
+}
+
+form button:hover,
+.done_button:hover,
+.trash_button:hover{
+    color: white;
+    background-color: black;
+}
+
+.toDo_tasks{
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.tasks{
+    list-style: none;
+    min-width: 25%;
+}
+
+.todo{
+    /* padding: 10px; */
+    margin: 10px;
+    display: flex;
+    background-color: white;
+    color: black;
+    justify-content: space-between;
+}
+
+.todo li{
+    flex: 1;
+    padding: 5px;
+}
+
+.done_button,
+.trash_button{
+    color: black;
+    background-color: white;
+    padding: 5px;
+    border: none;
+}
+
+.done_button:hover{
+    color: white;
+    background-color: green;
+}
+.trash_button:hover{
+    color: white;
+    background-color: red;
+}
+
+.fa-trash,
+.fa-check{
+    pointer-events: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.status{
+    margin: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+select{
+    color: black;
+    width: 110px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.status::after{
+    content: "\25BC";
+    position: absolute;
+    color: black;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+}
